@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plagiarism Detection Tool</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>✨ Plagiarism Detection Tool ✨</h1>
+    <form id="folderForm">
+      <button id="selectFolder" type="button">Select Folder</button>
+      <label for="threshold">Threshold (%):</label>
+      <input type="number" id="threshold" min="0" max="100" value="70" required>
+      <button type="submit">Process</button>
+    </form>
+
+    <div id="output">
+      <h2>🔍 Similarity Matrix</h2>
+      <div class="table-container">
+        <table id="similarityMatrix"></table>
+      </div>
+      <h2>🚩 Flagged Assignments</h2>
+      <div class="table-container">
+        <table id="flaggedReport"></table>
+      </div>
+    </div>
+  </div>
+  <script src="app.js" type="module"></script>
+</body>
+</html>
