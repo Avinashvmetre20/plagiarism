@@ -1,103 +1,161 @@
-/* General Styling */
+/* Import Google Font */
 body {
-    font-family: 'Arial', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f0f4f8;
-    color: #333;
-  }
-  
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  color: #fff;
+  text-align: center;
+}
+
+/* Main Container */
+.container {
+  background: rgba(255, 255, 255, 0.95);
+  max-width: 900px;
+  width: 90%;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+  color: #333;
+  text-align: center;
+}
+
+/* Headings */
+h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #333;
+}
+
+h2 {
+  font-size: 22px;
+  color: #444;
+  margin-top: 20px;
+}
+
+/* Form Styling */
+form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+label {
+  font-weight: 600;
+  color: #555;
+}
+
+input {
+  width: 80px;
+  padding: 8px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  text-align: center;
+  font-size: 16px;
+}
+
+/* Buttons */
+button {
+  background: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: 0.3s ease;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Sample Data Section */
+#sampleData {
+  margin-top: 20px;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#sampleData p {
+  font-size: 14px;
+  color: #666;
+}
+
+/* Table Styling */
+.table-container {
+  overflow-x: auto;
+  margin-top: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: center;
+  font-size: 16px;
+}
+
+th {
+  background: #007bff;
+  color: white;
+}
+
+td {
+  background: #f9f9f9;
+  font-weight: bold;
+}
+
+/* Highlight similarity scores above threshold */
+td.highlight {
+  background: #ff4d4d !important;
+  color: white;
+  font-weight: bold;
+}
+
+/* Flagged Assignments Styling */
+td.flagged {
+  background-color: #ffb6b6;
+  color: #21089e;
+  font-weight: bold;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
   .container {
-    max-width: 900px;
-    margin: 20px auto;
+    width: 95%;
     padding: 20px;
-    background: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
   }
-  
-  h1 {
-    text-align: center;
-    font-size: 2rem;
-    color: #0066cc;
-    margin-bottom: 20px;
+
+  input {
+    width: 60px;
+    font-size: 14px;
   }
-  
-  h2 {
-    margin-top: 30px;
-    color: #ff6600;
+
+  button {
+    font-size: 14px;
+    padding: 10px 15px;
   }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-  
-  form label {
-    font-weight: bold;
-  }
-  
-  form input, form button {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
-  
-  form button {
-    background-color: #28a745;
-    color: white;
-    cursor: pointer;
-    border: none;
-    font-size: 1.2rem;
-  }
-  
-  form button:hover {
-    background-color: #218838;
-  }
-  
-  /* Output Tables */
-  .table-container {
-    overflow-x: auto;
-    margin-top: 10px;
-  }
-  
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 10px;
-    font-size: 0.9rem;
-  }
-  
-  table, th, td {
-    border: 1px solid #ddd;
-  }
-  
+
   th, td {
-    padding: 12px;
-    text-align: center;
-    word-wrap: break-word;
+    font-size: 14px;
+    padding: 10px;
   }
-  
-  th {
-    background-color: #0066cc;
-    color: white;
-  }
-  
-  tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  tr:hover {
-    background-color: #f1f1f1;
-  }
-  
-  td.flagged {
-    background-color: #ffcccc;
-    color: #cc0000;
-    font-weight: bold;
-  }
-  
+}

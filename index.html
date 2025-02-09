@@ -5,28 +5,39 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Plagiarism Detection Tool</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <div class="container">
-    <h1>Plagiarism Detection Tool</h1>
+    <h1>🚀 Plagiarism Detection Tool</h1>
+    
     <form id="folderForm">
-      <button id="selectFolder" type="button">Select Folder</button>
+      <button id="selectFolder" type="button">📂 Select Folder</button>
       <label for="threshold">Threshold (%):</label>
       <input type="number" id="threshold" min="0" max="100" value="70" required>
-      <button type="submit">Process</button>
+      <button type="submit">🔍 Process</button>
     </form>
 
+    <div id="sampleData">
+      <h2>📂 Sample Data</h2>
+      <p>Download sample files to test plagiarism detection. Extract the folder, select the path, and set the threshold.</p>
+      <a href="TestData.zip" download>
+        <button type="button">📥 Download Sample Data</button>
+      </a>
+    </div>
+
     <div id="output">
-      <h2>Similarity Matrix</h2>
+      <h2>📊 Similarity Matrix</h2>
       <div class="table-container">
         <table id="similarityMatrix"></table>
       </div>
-      <h2>Flagged Assignments</h2>
+      <h2>🚨 Flagged Assignments</h2>
       <div class="table-container">
         <table id="flaggedReport"></table>
       </div>
     </div>
   </div>
+  
   <script src="app.js" type="module"></script>
 </body>
 </html>
